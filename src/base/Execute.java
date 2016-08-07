@@ -7,7 +7,14 @@ package base;
  */
 public class Execute {
 
+	/**
+	 * ウィンドウの幅
+	 */
 	public static final int WINDOW_WIDTH = 800;
+
+	/**
+	 * ウィンドウの高さ
+	 */
 	public static final int WINDOW_HEIGHT = 600;
 
 	public static void main(String[] args){

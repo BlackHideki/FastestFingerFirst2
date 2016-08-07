@@ -1,8 +1,6 @@
 package base;
 
 import java.awt.AWTEvent;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
@@ -33,8 +31,7 @@ public class GameFunctionBase extends JFrame {
 	 */
 	public GameFunctionBase(String title, int width, int height){
 		setTitle(title);
-		getContentPane().setPreferredSize(new Dimension(width, height));
-		pack();
+		setSize(width, height);
 		setResizable(false);
 	    setLocationRelativeTo(null);
 	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -42,7 +39,9 @@ public class GameFunctionBase extends JFrame {
 	    enableEvents(AWTEvent.MOUSE_EVENT_MASK);
 
 	    glb = new GameLogicBase(width, height);
-	    add(glb, BorderLayout.CENTER);
+	    glb.init();
+
+	    add(glb);
 
 	    keyFlg = false;
 	}

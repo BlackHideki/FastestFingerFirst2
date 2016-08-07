@@ -31,6 +31,13 @@ public class GameLogicBase extends JPanel implements Runnable {
 	}
 
 	/**
+	 * 初期化
+	 */
+	public void init() {
+		gl.init();
+	}
+
+	/**
 	 * ゲームループ
 	 */
 	@Override
