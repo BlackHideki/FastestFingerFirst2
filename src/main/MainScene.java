@@ -194,10 +194,10 @@ public class MainScene implements Scene {
 
 			if (key == KeyEvent.VK_ENTER) {
 				if (cursorPointListIndex == 0) {
-					gameFlg = GameFlg.Next;
-				} else {
 					gameFlg = GameFlg.Top;
 					init();
+				} else {
+					gameFlg = GameFlg.Next;
 				}
 			}
 			break;
@@ -241,8 +241,8 @@ public class MainScene implements Scene {
 			graphics.setFont(font100);
 			graphics.drawString("TIME : " + String.format("%.2f", recodeTime), 90, Execute.WINDOW_HEIGHT / 2 - font100.getSize());
 			graphics.setFont(font50);
-			graphics.drawImage(menuTitle.getImage(), Execute.WINDOW_WIDTH / 2 - menuTitle.getSize().width / 2, Execute.WINDOW_HEIGHT / 2 - menuTitle.getSize().height / 2, null);
-			graphics.drawImage(menuRetry.getImage(), Execute.WINDOW_WIDTH / 2 - menuRetry.getSize().width / 2, Execute.WINDOW_HEIGHT / 2  + menuRetry.getSize().height, null);
+			graphics.drawImage(menuRetry.getImage(), Execute.WINDOW_WIDTH / 2 - menuRetry.getSize().width / 2, Execute.WINDOW_HEIGHT / 2 - menuRetry.getSize().height / 2, null);
+			graphics.drawImage(menuTitle.getImage(), Execute.WINDOW_WIDTH / 2 - menuRetry.getSize().width / 2, Execute.WINDOW_HEIGHT / 2  + menuTitle.getSize().height, null);
 			graphics.drawImage(cursor.getImage(), cursorPointList.get(cursorPointListIndex).x, cursorPointList.get(cursorPointListIndex).y, null);
 			break;
 		}
